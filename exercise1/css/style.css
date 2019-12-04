@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.elementsField {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(124deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    height: 100vh;
+    padding: 100px 200px;
+}
+
+.elementsField__bttn {
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin: 0 auto 20px auto;
+    height: 28px;
+    width: 100px;
+    color: #fff;
+}
+
+.elementsField__square {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid rgb(2, 0, 36);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(321deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    margin: 10px 5px;
+    animation: rotateSquare .3s ease-in-out;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+@keyframes rotateSquare {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
