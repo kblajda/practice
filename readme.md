@@ -1,4 +1,2 @@
-# This is my repository for developing git, html, css, js skills.
-
-# These are my exercise
+# This is my repository for developing git command, html, css, js skills.
 # kblajda
