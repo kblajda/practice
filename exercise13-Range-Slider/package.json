@@ -26,9 +26,12 @@
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "gulp4-run-sequence": "^1.0.0",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.12",
     "lodash.template": "^4.5.0",
-    "minimatch": "^3.0.2"
+    "minimatch": "^3.0.2",
+    "rangeslider.js": "^2.3.3"
   }
 }

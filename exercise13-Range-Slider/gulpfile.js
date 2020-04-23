@@ -33,11 +33,11 @@ var config = {
     jsreplaceout: 'js/script.js'
 }
 
-gulp.task('reload', function () {
+gulp.task('reload', function() {
     browserSync.reload();
 })
 
-gulp.task('sass', function () {
+gulp.task('sass', function() {
     return gulp.src(config.scssin)
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
@@ -49,20 +49,20 @@ gulp.task('sass', function () {
         .pipe(browserSync.stream());
 })
 
-gulp.task('css', function () {
+gulp.task('css', function() {
     return gulp.src(config.cssin)
         .pipe(concat(config.cssoutname))
         .pipe(cleanCSS())
         .pipe(gulp.dest(config.cssout));
 })
-gulp.task('js', function () {
+gulp.task('js', function() {
     return gulp.src(config.jsin)
         .pipe(concat(config.jsoutname))
         .pipe(uglify())
         .pipe(gulp.dest(config.jsout));
 })
 
-gulp.task('img', function () {
+gulp.task('img', function() {
     return gulp.src(config.imgin)
         .pipe(changed(config.imgout))
         .pipe(imagemin())
@@ -70,7 +70,7 @@ gulp.task('img', function () {
 
 })
 
-gulp.task('html', function () {
+gulp.task('html', function() {
     return gulp.src(config.htmlin)
         .pipe(htmlReaplce({
             'css': config.cssreplaceout,
@@ -85,17 +85,17 @@ gulp.task('html', function () {
 })
 
 
-gulp.task('clean', function () {
+gulp.task('clean', function() {
     return del([config.dist]);
 })
 
-gulp.task('build', function (done) {
+gulp.task('build', function(done) {
     sequence('clean', gulp.series(['html', 'js', 'css', 'img']));
     done();
 })
 
 
-gulp.task('server', gulp.series(['sass'], function () {
+gulp.task('server', gulp.series(['sass'], function() {
 
     browserSync({
         server: config.src
@@ -104,6 +104,6 @@ gulp.task('server', gulp.series(['sass'], function () {
     gulp.watch([config.htmlin, config.jsin], gulp.series(['reload']));
     gulp.watch(config.scssin, gulp.series(['sass']));
 }));
-gulp.task('default', gulp.series(['server'], function () {
+gulp.task('default', gulp.series(['server'], function() {
     console.log('domyslne')
 }))
