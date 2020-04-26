@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- build:css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
+    <link rel="stylesheet" href="css/rangeslider.css">
+</head>
+
+<body>
+    <section class="range-slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="slider-wrapp">
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <h3 class="wrapp-title">Choose your package</h2>
+                                    <div class="slider silder-first">
+                                        <div class="slider-top">
+                                            <h3 class="slider-title">Select size package</h2>
+                                                <p class="slider-price"><span data-price>12</span>$/<span data-counter>4</span>GB</p>
+                                        </div>
+                                        <div class="slider-content">
+                                            <input id="slider1" class="slider" min="4" max="1024" step="4" value="4" type="range" data-orientation="horizontal" data-range-slider/>
+                                        </div>
+                                        <div class="slider-bottom">
+                                            <p class="min-value">Min: <span></span></p>
+                                            <p class="current-value">Value: <span id="currentValue"></span></p>
+                                            <p class="max-value">Max: <span></span></p>
+                                        </div>
+                                    </div>
+                                    <span class="line-break"></span>
+                                    <div class="slider silder-second">
+                                        <div class="slider-top">
+                                            <h3 class="slider-title">Select months package</h2>
+                                                <p class="slider-price"><span data-price>24</span>$/<span data-counter>month</span></p>
+                                        </div>
+                                        <div class="slider-content">
+                                            <input id="slider2" class="slider" type="range" min="1" max="36" step="1" value="1" data-orientation="horizontal" data-range-slider/>
+                                        </div>
+                                        <div class="slider-bottom">
+                                            <p class="min-value">Min: <span></span></p>
+                                            <p class="current-value">Value: <span></span></p>
+                                            <p class="max-value">Max: <span></span></p>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-xl-4 price-line">
+                                <div class="price">
+                                    <div class="price-top">
+                                        <h3 class="price-title">Total price</h3>
+                                    </div>
+                                    <div class="price-content">
+                                        <p class="sizePrice">Your size package: <span></span></p>
+                                        <p class="monthPrice">Your month package: <span></span></p>
+                                        <p class="totalPrice">Total package price: <span></span> </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- build:js -->
+    <script src="js/script.js" type="module"></script>
+    <!-- endbuild -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="./js/rangeslider.min.js"></script>
+</body>
+
+</html>

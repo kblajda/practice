@@ -1,0 +1,106 @@
+@import "settings";
+@import "bootstrap";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1d1e22;
+    background-image: linear-gradient(315deg, #393f4d 0%, #1d1e22 74%);
+    color: #d4d4dc;
+    span {
+        color: #b90e9d;
+    }
+    .line-break {
+        background: #b90e9d;
+        width: 100%;
+        height: 1px;
+        display: block;
+        margin: 15px 0;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.range-slider {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    .slider-wrapp {
+        border-radius: 20px;
+        background-color: #393f4d;
+        width: 70vw;
+        margin: 0 auto;
+        padding: 20px;
+        .wrapp-title {
+            text-align: center;
+            font-size: 24px;
+        }
+        .slider {
+            padding: 20px 0 20px;
+            .slider-top {
+                display: flex;
+                justify-content: space-between;
+                .slider-title {
+                    font-size: 16px;
+                    color: #d4d4dc;
+                    font-weight: 400;
+                }
+                .slider-price {
+                    display: inline;
+                    font-size: 18px;
+                    color: #b90e9d;
+                }
+            }
+            .slider-content {
+                padding: 20px 0 10px 0;
+                .slider {
+                    width: 100%;
+                    padding: 10px;
+                }
+                .rangeslider__fill {
+                    background: #b90e9d
+                }
+                .rangeslider__handle {
+                    background: #b90e9d;
+                    border: 0;
+                }
+            }
+            .slider-bottom {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+    .price-line {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: #b90e9d;
+            width: 1px;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            display: block;
+        }
+    }
+    .price {
+        display: flex;
+        flex-direction: column;
+        &-top {
+            padding-bottom: 20px;
+            .price-title {
+                text-align: center;
+            }
+        }
+        &-content {
+            padding: 20px 0;
+        }
+    }
+}
